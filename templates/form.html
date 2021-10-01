@@ -1,0 +1,19 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <form action="http://127.0.0.1:5000/prediction" method="POST">
+
+            BMI: <input type="number" name="bmi">
+            <br><br>
+            Age: <input type="number" name="age">
+            <br><br>
+            Glucose: <input type="number" name="glucose">
+            <br><br>
+            <input type="submit">
+            <br><br>
+
+            Diagnosis: {{output}}
+        </form>
+    </body>
+</html>
