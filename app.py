@@ -7,7 +7,7 @@ loadedModel = pickle.load(open('diabetes.sav','rb'))
 
 @app.route("/")
 def home():
-    return render_template('form.html')
+    return render_template('index.html')
 
 @app.route("/prediction", methods=['POST'])
 def prediction():
@@ -22,7 +22,7 @@ def prediction():
     else:
         prediction = "Diabetic"
 
-    return render_template('form.html', output=prediction)
+    return render_template('index.html', output=prediction)
 
 if __name__ == '__main__':
     app.run(debug=True)
